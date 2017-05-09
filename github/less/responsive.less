@@ -1,0 +1,147 @@
+/*******************************
+          RESPONSIVE
+*******************************/
+
+@media (max-width:600px){
+	body{
+		font-size: 10px;
+	}
+	.content{
+		.viewport{
+			.col-sm-1{
+				width: 100%;
+			}
+		}
+	}
+}
+@media (max-width:900px){
+	table{
+	  border: 1px solid @l-grey;
+	  width: 310px;
+	  left: 50%;
+	  margin-left: -155px;
+	  position: relative;
+	  td,tbody,tr{
+	    display: block;
+	  }
+	  thead{
+	    display: none;
+	  }
+	  td{
+	    border: none;
+	    border-bottom: 1px solid @l-grey;
+	    position: relative;
+	    // padding-left: 80px;
+	  }
+	  td:before{
+	      font-weight: 600;
+	      margin-right: 5px;
+	  }
+	  tbody tr{
+	    td:nth-of-type(1):before{content: "ID:";}
+	    td:nth-of-type(2):before{content: "Nome:";}
+	    td:nth-of-type(3):before{content: "Representação:";}
+	    td:nth-of-type(4):before{content: "Email:";}
+	    td:nth-of-type(5):before{content: "DDD:";}
+	    td:nth-of-type(6):before{content: "Telefone:";}
+	    td:nth-of-type(7):before{content: "Transporte:";}
+	    td:nth-of-type(8):before{content: "Origem:";}
+	    td:nth-of-type(9):before{content: "Cidade:";} 
+	  }
+	}
+}
+@media (min-width:425px){
+	table{
+		width: 400px;
+		margin-left: -200px;
+	}
+	header{
+	  p{
+	    margin-left: -75px;
+	    }
+	}
+	.options{
+	  width: 400px;
+	  margin-left: -200px;
+	  input[type=text]{
+	    width: 212px;
+	  }
+	}
+}
+@media (min-width:768px){
+	table{
+		width: 700px;
+		margin-left: -350px;
+	}
+}
+@media (min-width:900px){
+	.btn{
+		&:hover{
+			background-color: black;
+			cursor: pointer;
+		}
+	}
+	.tools{
+		width: 900px;
+		left: 50%;
+		margin-left: -450px;
+		position: relative;
+		margin-top: 10px;
+		height: 40px;
+	}
+	.menu{
+		width: 405px;
+	    float: left;
+	    margin: 0;
+	    // left: 40px;
+	    position: absolute;
+	    .main li,.eventos li{
+	    	width:100%;
+	    	margin: 0;
+	    	left: 0; 
+	    }
+	    .eventos{
+	    	left: 405px;
+	    	li:hover{
+	    		background-color:#dadada;
+	    	}
+	    }
+	    .main li{
+	    	&:hover{
+	    		background-color: #ebebeb;
+	    	}
+	    }
+	}
+	.options{
+		width: 445px;
+		float: right;
+		margin: 0;
+		left: 0;
+	  input[type=text]{
+	    width: 212px;
+	  }
+	}
+	table{
+		margin-top:10px;
+		border: 1px solid @l-grey;
+		// left: 50%;
+		position: relative;
+		width:100%;
+		margin-left: 0px;
+		th,td{
+			border-right: 1px solid @l-grey;
+			border-bottom: 1px solid @l-grey;
+		}
+		th{
+			background-color: #f1f1f1;
+		}
+	}
+}
+// @media (min-width:1200px){
+// 	table{
+// 		// width: 1200px;
+// 		// margin-left: -600px;
+// 	}
+// }
+
+// @import url(import.less);
