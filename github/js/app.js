@@ -16,26 +16,26 @@ window.jQuery = window.$ = function(el) {
 *
 */
 
-var app = angular.module('app', ["ngRoute", 'mgcrea.jquery',"ngCookies","ngSanitize"]);
+var app = angular.module('app', ["ngRoute", 'mgcrea.jquery',"ngCookies"]);
 var baseUrl="http://189.126.197.169/node/server/index.js?";
 
 app.config(function($routeProvider) {
-	$routeProvider.when('/search/:type/:search', {
-      templateUrl: "views/app.html",
-      controller: "PageCtrl",
+	$routeProvider.when('/', {
+      templateUrl: "views/initial.html",
+      controller: "InitialCtrl",
       resolve:{
         message: function($route){
-          ga('send', 'pageview',  'result.html#/search/'+$route.current.params.type+"/"+$route.current.params.search);
+          //ga('send', 'pageview',  'result.html#/search/'+$route.current.params.type+"/"+$route.current.params.search);
           return !1;
         }
       }
   })
-	.when('/:type/:search/detail/:code', {
-    templateUrl: "views/detail.html",
-    controller: "DetailCtrl",
+	.when('/reports', {
+    templateUrl: "views/reports.html",
+    controller: "Reports",
     resolve:{
       message: function($route){
-        ga('send', 'pageview', 'result.html#/'+$route.current.params.type+"/"+$route.current.params.search+"/detail/"+$route.current.params.code);
+        //ga('send', 'pageview', 'result.html#/'+$route.current.params.type+"/"+$route.current.params.search+"/detail/"+$route.current.params.code);
         return !1;
       }
     }
@@ -45,6 +45,10 @@ app.config(function($routeProvider) {
 });
 
 
-app.controller('AppCtrl', function ($scope) {
+app.controller('InitialCtrl', function ($scope) {
   alert('ok');
+});
+
+app.controller('Reports', function ($scope) {
+  alert('Reports');
 });
