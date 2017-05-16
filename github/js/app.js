@@ -132,7 +132,6 @@ app.controller('Reports', function ($scope, $http, dataService, Excel, $timeout)
   alert('Reports');
   $scope.clients = [];
   $scope.users = [];
-  $scope.getClients = getClients;
   $scope.exportToExcel = exportToExcel;
   $scope.convertDate=convertDate;
 
