@@ -1,3 +1,11 @@
+window.jQuery = window.$ = function(el) {
+    /*Hack de seletor jquery para angular*/
+    if (typeof el === "string" && el.charAt(0) !== '<') {
+            el = document.querySelectorAll(el);
+    }
+    return angular.element(el);
+};
+
 Array.prototype.indexOf||(Array.prototype.indexOf=function(a,b){for(var c=b||0,d=this.length;c<d;c++)if(this[c]===a)return c;return-1});window.intervalList=[];window.oldSetInterval=window.setInterval;window.oldClearInterval=window.clearInterval;window.setInterval=function(a,b){var c=[].slice.call(arguments,2),d=window.oldSetInterval(function(){a.apply(this,c)},b);window.intervalList.push(d);return d};
 function arrayObject(a){var b={};$.each(a,function(a,d){b.hasOwnProperty(d.name)?(b[d.name]=$.makeArray(b[d.name]),b[d.name].push(d.value)):b[d.name]=d.value});return b}function toObject(a){var b={};$.each(a,function(c,d){0===c%2&&!b.hasOwnProperty(d)&&(b[d]=a[c+1])});return b}function getCookie(a){var b,c,d,e=document.cookie.split(";");for(b=0;b<e.length;b++)if(c=e[b].substr(0,e[b].indexOf("=")),d=e[b].substr(e[b].indexOf("=")+1),c=c.replace(/^\s+|\s+$/g,""),c===a)return unescape(d)}
 function isEmail(c) {
