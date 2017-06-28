@@ -1,5 +1,5 @@
-app.controller('Fashionday2017', function ($scope, $http, dataService, Excel, $timeout) {
-  alert('Reports');
+app.controller('Fashionday2017', function ($scope,dataService, Excel) {
+  //alert('Reports');
   $scope.clients = [];
   $scope.users = [];
 
@@ -16,12 +16,5 @@ app.controller('Fashionday2017', function ($scope, $http, dataService, Excel, $t
   function loadClients(users) {
       $scope.clients = users;
   };
-  function teste(a){
-        var html=[];
-        for(var i=0;i<a.length;i++){
-            html.push(a[i].item);
-        }
-        return html.join(" / ");
-    }
   loadUsers();
 });

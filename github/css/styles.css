@@ -287,6 +287,16 @@ header span {
 }
 .content {
   margin-top: 5px;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+.content .table_container {
+  position: relative;
+  float: left;
+  width: 100%;
+  overflow: auto;
+  margin-top: 5px;
 }
 .line {
   position: relative;
@@ -593,32 +603,53 @@ form .label-default {
     font-weight: 600;
     margin-right: 5px;
   }
-  table tbody tr td:nth-of-type(1):before {
-    content: "ID:";
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(1):before {
+    content: "Codigo:";
   }
-  table tbody tr td:nth-of-type(2):before {
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(2):before {
+    content: "Representante:";
+  }
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(3):before {
     content: "Nome:";
   }
-  table tbody tr td:nth-of-type(3):before {
-    content: "Representação:";
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(4):before {
+    content: "Razão:";
   }
-  table tbody tr td:nth-of-type(4):before {
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(5):before {
+    content: "Gerente:";
+  }
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(6):before {
+    content: "Categoria:";
+  }
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(7):before {
+    content: "Cargo:";
+  }
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(8):before {
     content: "Email:";
   }
-  table tbody tr td:nth-of-type(5):before {
-    content: "DDD:";
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(9):before {
+    content: "Segmentos:";
   }
-  table tbody tr td:nth-of-type(6):before {
-    content: "Telefone:";
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(10):before {
+    content: "Data:";
   }
-  table tbody tr td:nth-of-type(7):before {
-    content: "Transporte:";
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(11):before {
+    content: "Convidado principal:";
   }
-  table tbody tr td:nth-of-type(8):before {
-    content: "Origem:";
+  ._eventos_criciuma2017 table tbody tr td:nth-of-type(12):before {
+    content: "Confirmou presença:";
   }
-  table tbody tr td:nth-of-type(9):before {
-    content: "Cidade:";
+  ._eventos_fashionday2017 table tbody tr td:nth-of-type(1):before {
+    content: "Nome:";
+  }
+  ._eventos_fashionday2017 table tbody tr td:nth-of-type(2):before {
+    content: "Perfil:";
+  }
+  ._eventos_fashionday2017 table tbody tr td:nth-of-type(3):before {
+    content: "Data:";
+  }
+  ._eventos_fashionday2017 table tbody tr td:nth-of-type(4):before {
+    content: "Navegação:";
   }
 }
 @media (min-width: 425px) {
@@ -650,11 +681,9 @@ form .label-default {
   }
   .tools {
     width: 900px;
-    left: 50%;
-    margin-left: -450px;
     position: relative;
-    margin-top: 10px;
     height: 40px;
+    margin: 10px auto 0;
   }
   .menu {
     width: 405px;

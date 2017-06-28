@@ -1,5 +1,5 @@
-app.controller('Criciuma2017', function ($scope, $http, dataService, Excel, $timeout) {
-  alert('Reports');
+app.controller('Criciuma2017', function ($scope,dataService, Excel) {
+  //alert('Reports');
   $scope.clients = [];
   $scope.users = [];
 

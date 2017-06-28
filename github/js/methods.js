@@ -89,3 +89,27 @@ Array.prototype.map || (Array.prototype.map = function(c, a) {
   }
   return e;
 });
+
+if (!String.prototype.replaceAll) {
+    String.prototype.replaceAll = function(search, replace) {
+        'use strict';
+        if (replace === undefined) {
+            return this.toString();
+        }
+        return this.split(search).join(replace);
+    }
+}
+
+if (!Object.keys) {
+  Object.keys = function(obj) {
+    var keys = [];
+
+    for (var i in obj) {
+      if (obj.hasOwnProperty(i)) {
+        keys.push(i);
+      }
+    }
+
+    return keys;
+  };
+}

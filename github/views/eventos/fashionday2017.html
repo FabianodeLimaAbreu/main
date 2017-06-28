@@ -1,0 +1,70 @@
+<div class="tools">
+  <button class="menu-btn"></button>
+  <p class="breadcrumb"> David | David </p>
+  <div class="menu">
+    <ul class="main">
+        <li>Eventos</li>
+        <li>Convenções</li>
+        <li>Downloads  Conteúdo</li>
+        <li>Focus 24h</li>
+        <li>eBook – Ação Promocional</li>
+    </ul>
+    <ul class="eventos">
+        <li>Focus fashion Day – Teatro Bradesco – 07/03/2017</li>
+        <li>Criciúma – SC – 04/05/2017</li>
+    </ul>
+  </div>
+  <div class="options">
+    <input type="text" ng-model="search">
+    <button  class="search-btn" type="sub"></button>
+    <button class="export-btn" ng-click="exportToExcel('tableToExportNoAccents')">Exportar Excel</button>
+  </div>
+</div>
+<div class="table_container">
+  <table ng-init=loadUsers()>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Perfil</th>
+        <th>Data</th>
+        <th>Navegação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="client in clients | orderBy:'id' | filter:search">
+        <td>{{client.name}}</td>
+        <td>{{client.perfil}}</td>  
+        <td>{{convertDate(client.date)}}</td>  
+        <td>
+            <p ng-repeat="nav in client.navigation">
+                {{nav.item.removeAccents()}}
+            </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div id="tableToExportNoAccents" class="hide">
+  <table class="table table-striped" ng-init=loadUsers()>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Perfil</th>
+        <th>Data</th>
+        <th>Navegacao</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="client in clients | orderBy:'id' | filter:search">
+        <td>{{client.name}}</td>
+        <td>{{client.perfil}}</td>  
+        <td>{{convertDate(client.date)}}</td>  
+        <td>
+            <p ng-repeat="nav in client.navigation">
+                {{nav.item.removeAccents()}}
+            </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

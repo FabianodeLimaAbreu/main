@@ -20,41 +20,43 @@
     <button class="export-btn" ng-click="exportToExcel('tableToExportNoAccents')">Exportar Excel</button> <!-- ng-click="exportToExcel('tableToExportNoAccents')"-->
   </div>
 </div>
-<table ng-init=loadUsers()>
-  <thead>
-    <tr>
-      <th>Codigo</th>
-      <th>Representante</th>
-      <th>Nome</th>
-      <th>Razão</th>
-      <th>Gerente</th>
-      <th>Categoria</th>
-      <th>Cargo</th>
-      <th>Email</th>
-      <th>Segmentos</th>
-      <th>Data</th>
-      <th>Convidado principal</th>
-      <th>Confirmou presença</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr ng-repeat="client in clients | orderBy:'id' | filter:search">
-      <td>{{client.CODIGO || client.pcodigo}}</td>
-      <td>{{client.REPRESENTANTE || "-"}}</td>
-      <td>{{client.CONTATO || client.pname}}</td> <!--{{client.name || client.pname}}-->
-      <td>{{client.RAZAO || client.razao}}</td>
-      <td>{{client.GERENTE || " - "}}</td>
-      <td>{{client.CATEGORIA || " - "}}</td>
-      <td>{{client.cargo || client.pcargo}}</td>
-      <td>{{client.EMAIL || client.pemail}}</td>
-      <!--<td><span ng-repeat="seg in client.segments">{{seg.segval}} , </span><span ng-repeat="seg in client.psegments">{{seg.segval}} ,</span></td>-->
-      <td>{{client.segments}}</td>
-      <td>{{convertDate(client.date)}}</td>
-      <td>{{client.main}}</td>
-      <td>{{client.confirmed}}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table_container">
+  <table ng-init=loadUsers()>
+    <thead>
+      <tr>
+        <th>Codigo</th>
+        <th>Representante</th>
+        <th>Nome</th>
+        <th>Razão</th>
+        <th>Gerente</th>
+        <th>Categoria</th>
+        <th>Cargo</th>
+        <th>Email</th>
+        <th>Segmentos</th>
+        <th>Data</th>
+        <th>Convidado principal</th>
+        <th>Confirmou presença</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="client in clients | orderBy:'id' | filter:search">
+        <td>{{client.CODIGO || client.pcodigo}}</td>
+        <td>{{client.REPRESENTANTE || "-"}}</td>
+        <td>{{client.CONTATO || client.pname}}</td> <!--{{client.name || client.pname}}-->
+        <td>{{client.RAZAO || client.razao}}</td>
+        <td>{{client.GERENTE || " - "}}</td>
+        <td>{{client.CATEGORIA || " - "}}</td>
+        <td>{{client.cargo || client.pcargo}}</td>
+        <td>{{client.EMAIL || client.pemail}}</td>
+        <!--<td><span ng-repeat="seg in client.segments">{{seg.segval}} , </span><span ng-repeat="seg in client.psegments">{{seg.segval}} ,</span></td>-->
+        <td>{{client.segments}}</td>
+        <td>{{convertDate(client.date)}}</td>
+        <td>{{client.main}}</td>
+        <td>{{client.confirmed}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 <div id="tableToExportNoAccents" class="hide">
   <table class="table table-striped" ng-init=loadUsers()>
     <thead>
@@ -91,6 +93,4 @@
       </tr>
     </tbody>
   </table>
-  <div class="container">
-  </div>
 </div>
