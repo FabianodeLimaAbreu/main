@@ -37,17 +37,34 @@
 	      font-weight: 600;
 	      margin-right: 5px;
 	  }
-	  tbody tr{
-	    td:nth-of-type(1):before{content: "ID:";}
-	    td:nth-of-type(2):before{content: "Nome:";}
-	    td:nth-of-type(3):before{content: "Representação:";}
-	    td:nth-of-type(4):before{content: "Email:";}
-	    td:nth-of-type(5):before{content: "DDD:";}
-	    td:nth-of-type(6):before{content: "Telefone:";}
-	    td:nth-of-type(7):before{content: "Transporte:";}
-	    td:nth-of-type(8):before{content: "Origem:";}
-	    td:nth-of-type(9):before{content: "Cidade:";} 
-	  }
+	}
+	._eventos_criciuma2017{
+		table{
+			tbody tr{
+			    td:nth-of-type(1):before{content: "Codigo:";}
+			    td:nth-of-type(2):before{content: "Representante:";}
+			    td:nth-of-type(3):before{content: "Nome:";}
+			    td:nth-of-type(4):before{content: "Razão:";}
+			    td:nth-of-type(5):before{content: "Gerente:";}
+			    td:nth-of-type(6):before{content: "Categoria:";}
+			    td:nth-of-type(7):before{content: "Cargo:";}
+			    td:nth-of-type(8):before{content: "Email:";}
+			    td:nth-of-type(9):before{content: "Segmentos:";} 
+			    td:nth-of-type(10):before{content: "Data:";} 
+			    td:nth-of-type(11):before{content: "Convidado principal:";} 
+			    td:nth-of-type(12):before{content: "Confirmou presença:";} 
+		  	}
+		}
+	}
+	._eventos_fashionday2017{
+		table{
+			tbody tr{
+			    td:nth-of-type(1):before{content: "Nome:";}
+			    td:nth-of-type(2):before{content: "Perfil:";}
+			    td:nth-of-type(3):before{content: "Data:";}
+			    td:nth-of-type(4):before{content: "Navegação:";}
+		  	}
+		}
 	}
 }
 @media (min-width:425px){
@@ -83,11 +100,9 @@
 	}
 	.tools{
 		width: 900px;
-		left: 50%;
-		margin-left: -450px;
 		position: relative;
-		margin-top: 10px;
 		height: 40px;
+		margin: 10px auto 0;
 	}
 	.menu{
 		width: 405px;

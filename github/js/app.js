@@ -124,7 +124,9 @@ function dataService($http) {
     }
 }
 
-app.controller("AppCtrl",function($scope){
+app.controller("AppCtrl",function($scope,Excel,$timeout,$location){
+  //console.log($routeParams.)
+  $scope.classpage=$location.path().replaceAll("/","_");
   $scope.exportToExcel = exportToExcel;
   $scope.convertDate=convertDate;
   function exportToExcel(tableId) { // ex: '#my-table'
